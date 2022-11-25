@@ -44,7 +44,7 @@ namespace Flappy_Bird
 
             if (Flappy.Bounds.IntersectsWith(TuboB.Bounds) ||
                 Flappy.Bounds.IntersectsWith(TuboA.Bounds) ||
-                Flappy.Bounds.IntersectsWith(Suelo.Bounds)
+                Flappy.Bounds.IntersectsWith(Suelo.Bounds) || Flappy.Top <0
                 )
             {
                 EndGame();
