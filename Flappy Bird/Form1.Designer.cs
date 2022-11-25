@@ -86,7 +86,7 @@
             this.Puntos.AutoSize = true;
             this.Puntos.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.Puntos.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Puntos.Location = new System.Drawing.Point(157, 554);
+            this.Puntos.Location = new System.Drawing.Point(173, 554);
             this.Puntos.Name = "Puntos";
             this.Puntos.Size = new System.Drawing.Size(151, 39);
             this.Puntos.TabIndex = 4;
