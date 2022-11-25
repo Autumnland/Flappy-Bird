@@ -50,6 +50,11 @@ namespace Flappy_Bird
                 EndGame();
             }
 
+            if (puntaje > 5)
+            {
+                velocidad = 15;
+            }
+
         }
 
         private void GameKeyDown(object sender, KeyEventArgs e)
