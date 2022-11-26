@@ -16,6 +16,9 @@ namespace Flappy_Bird
         int velocidad = 8;
         int gravedad = 5;
         int puntaje = 0;
+        int a = 5;
+        int b;
+        int cont = 1;
 
         public Form1()
         {
@@ -50,9 +53,12 @@ namespace Flappy_Bird
                 EndGame();
             }
 
-            if (puntaje > 5)
+            b = a * cont;
+
+            if (puntaje > b)
             {
-                velocidad = 15;
+                cont++;
+                velocidad += 1;
             }
 
         }
@@ -62,7 +68,7 @@ namespace Flappy_Bird
 
             if (e.KeyCode == Keys.Space)
             {
-                gravedad = -15;
+                gravedad = -10;
             }
 
         }
@@ -72,7 +78,7 @@ namespace Flappy_Bird
 
             if (e.KeyCode == Keys.Space)
             {
-                gravedad = 15;
+                gravedad = 10;
             }
 
         }
