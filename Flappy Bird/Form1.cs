@@ -33,9 +33,9 @@ namespace Flappy_Bird
             TuboA.Left -= velocidad;
             Puntos.Text = "Puntaje " + puntaje;
 
-            if (TuboB.Right <0)
+            if (TuboB.Right < 0)
             {
-                TuboB.Left= 700;
+                TuboB.Left = 700;
                 puntaje++;
             }
 
@@ -47,7 +47,7 @@ namespace Flappy_Bird
 
             if (Flappy.Bounds.IntersectsWith(TuboB.Bounds) ||
                 Flappy.Bounds.IntersectsWith(TuboA.Bounds) ||
-                Flappy.Bounds.IntersectsWith(Suelo.Bounds) || Flappy.Top <0
+                Flappy.Bounds.IntersectsWith(Suelo.Bounds) || Flappy.Top < 0
                 )
             {
                 EndGame();
@@ -71,6 +71,19 @@ namespace Flappy_Bird
                 gravedad = -10;
             }
 
+            if (e.KeyCode == Keys.Enter && !Temporizador.Enabled)
+            {
+                Temporizador.Start();
+                velocidad = 8;
+                gravedad = 5;
+                puntaje = 0;
+                cont = 1;
+                a = 5;
+                b = 0;
+                Flappy.Location = new Point(71, 210);
+                TuboA.Location = new Point(500, -31);
+                TuboB.Location = new Point(405, 401);
+            }
         }
 
         private void GameKeyUp(object sender, KeyEventArgs e)
@@ -86,8 +99,8 @@ namespace Flappy_Bird
         private void EndGame()
         {
             Temporizador.Stop();
-            Puntos.Text += " Game over !!!";
-        }
+            Puntos.Text += " Game over !!! - Enter para reiniciar";
 
+        }
     }
 }
